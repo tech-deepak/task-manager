@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Sign Up</h3>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="signForm" (submit)="onSubmit()">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" class="form-control" formControlName="name" minlength="6" maxlength="50" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" formControlName="email" minlength="6" maxlength="100" required pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" formControlName="password" minlength="6" maxlength="20" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" minlength="6" maxlength="20" class="form-control"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                            <div class="row justify-content-center mt-4"> 
+								<p>Already have an Account?</p>&nbsp;
+								<a href="login.html">Login</a>
+							</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
